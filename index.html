@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>The Archive — Roshan</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         BACKGROUND
+    ========================================== -->
+
+    <div class="background-grid"></div>
+
+    <div class="particles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+    <!-- =========================================
+         LOGIN SCREEN
+    ========================================== -->
+
+    <main id="loginScreen" class="screen login-screen">
+
+        <div class="archive-corner top-left"></div>
+        <div class="archive-corner top-right"></div>
+        <div class="archive-corner bottom-left"></div>
+        <div class="archive-corner bottom-right"></div>
+
+        <div class="login-container">
+
+            <div class="archive-label">
+                THE ARCHIVE
+                <span>v1.0.0</span>
+            </div>
+
+            <div class="folder-icon">
+                <div class="folder-tab"></div>
+                <div class="folder-body"></div>
+            </div>
+
+            <h1>PRIVATE ARCHIVE</h1>
+
+            <div class="restricted">
+                ACCESS RESTRICTED
+            </div>
+
+            <p class="login-description">
+                This is a secured archive.<br>
+                Please enter your name to continue.
+            </p>
+
+            <div class="input-wrapper">
+
+                <input
+                    type="text"
+                    id="nameInput"
+                    placeholder="Enter your name..."
+                    autocomplete="off"
+                >
+
+                <div id="errorMessage" class="error-message">
+                    ACCESS DENIED
+                </div>
+
+            </div>
+
+            <button id="accessButton" class="access-button">
+                ACCESS FILE
+                <span>→</span>
+            </button>
+
+            <div class="login-footer">
+                <span>ARCHIVE ID: 24-09-XX</span>
+                <span>STATUS: <b>████████</b> 100%</span>
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================================
+         MAIN ARCHIVE
+    ========================================== -->
+
+    <main id="archiveScreen" class="archive-screen hidden">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="brand">
+                <span class="brand-icon">▱</span>
+                THE ARCHIVE
+            </div>
+
+            <div class="top-status">
+                SYSTEM ONLINE
+                <span class="online-dot"></span>
+            </div>
+
+        </header>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button id="menuButton" class="menu-button">
+            ☰
+        </button>
+
+
+        <!-- SIDEBAR -->
+
+        <aside id="sidebar" class="sidebar">
+
+            <div class="sidebar-title">
+                THE ARCHIVE
+                <small>// PERSONAL ARCHIVE</small>
+            </div>
+
+            <nav>
+
+                <button
+                    class="nav-item active"
+                    data-section="dashboard"
+                >
+                    <span>⌂</span>
+                    Dashboard
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-section="personal"
+                >
+                    <span>♙</span>
+                    Personal Data
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-section="timeline"
+                >
+                    <span>◷</span>
+                    Timeline
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-section="memories"
+                >
+                    <span>▧</span>
+                    Memories
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-section="analysis"
+                >
+                    <span>◉</span>
+                    Behavioral Analysis
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-section="secret"
+                >
+                    <span>◇</span>
+                    Unknown File
+                </button>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <section class="content">
+
+
+            <!-- =====================================
+                 DASHBOARD
+            ====================================== -->
+
+            <section
+                id="dashboard"
+                class="content-section active-section"
+            >
+
+                <div class="section-header">
+                    <span>THE ARCHIVE //</span>
+                    DASHBOARD
+                </div>
+
+                <div class="welcome">
+
+                    <div>
+
+                        <p class="small-label">
+                            ARCHIVE ACCESS GRANTED
+                        </p>
+
+                        <h2>
+                            WELCOME,
+                            <span>ROSHAN</span>
+                        </h2>
+
+                        <p>
+                            Your personal archive has been loaded.
+                        </p>
+
+                    </div>
+
+                    <div class="heart-large">
+                        ♥
+                    </div>
+
+                </div>
+
+
+                <div class="stat-grid">
+
+                    <div class="stat-card">
+                        <span>SUBJECT</span>
+                        <strong>LOVE</strong>
+                    </div>
+
+                    <div class="stat-card">
+                        <span>STATUS</span>
+                        <strong class="green">
+                            ACTIVE
+                        </strong>
+                    </div>
+
+                    <div class="stat-card">
+                        <span>SECRET LEVEL</span>
+                        <strong>∞</strong>
+                    </div>
+
+                    <div class="stat-card">
+                        <span>IMPORTANCE</span>
+                        <strong class="pink">
+                            CRITICAL
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-grid">
+
+                    <div class="panel">
+
+                        <div class="panel-title">
+                            AVAILABLE FILES
+                        </div>
+
+                        <button
+                            class="file-button"
+                            data-section="personal"
+                        >
+                            <span>01</span>
+                            Personal Data
+                            <b>→</b>
+                        </button>
+
+                        <button
+                            class="file-button"
+                            data-section="timeline"
+                        >
+                            <span>02</span>
+                            Our Timeline
+                            <b>→</b>
+                        </button>
+
+                        <button
+                            class="file-button"
+                            data-section="memories"
+                        >
+                            <span>03</span>
+                            Memory Archive
+                            <b>→</b>
+                        </button>
+
+                        <button
+                            class="file-button"
+                            data-section="analysis"
+                        >
+                            <span>04</span>
+                            Behavioral Analysis
+                            <b>→</b>
+                        </button>
+
+                    </div>
+
+
+                    <div class="love-panel">
+
+                        <div class="glow-heart">
+                            ♥
+                        </div>
+
+                        <p>
+                            Every person has a story.
+                        </p>
+
+                        <strong>
+                            This is ours.
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================
+                 PERSONAL DATA
+            ====================================== -->
+
+            <section
+                id="personal"
+                class="content-section"
+            >
+
+                <div class="section-header">
+                    THE ARCHIVE //
+                    PERSONAL DATA
+                </div>
+
+                <div class="profile-card">
+
+                    <div class="profile-photo">
+
+                        <img
+                            src="assets/images/memory-01.jpeg"
+                            alt="Roshan"
+                        >
+
+                    </div>
+
+                    <div class="profile-info">
+
+                        <span class="small-label">
+                            SUBJECT PROFILE
+                        </span>
+
+                        <h2>ROSHAN</h2>
+
+                        <div class="profile-row">
+                            <span>NAME</span>
+                            <strong>Roshan</strong>
+                        </div>
+
+                        <div class="profile-row">
+                            <span>STATUS</span>
+                            <strong>IMPORTANT</strong>
+                        </div>
+
+                        <div class="profile-row">
+                            <span>KNOWN AS</span>
+                            <strong>
+                                My favorite person
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="habits panel">
+
+                    <div class="panel-title">
+                        KNOWN HABITS
+                    </div>
+
+                    <ul>
+
+                        <li>
+                            Makes ordinary moments memorable by unexpected fights
+                        </li>
+
+                        <li>
+                            Somehow makes me smile
+                        </li>
+
+                        <li>
+                            Steals my attention by fighting
+                        </li>
+
+                        <li>
+                            Has become unnecessarily important
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================
+                 TIMELINE
+            ====================================== -->
+
+            <section
+                id="timeline"
+                class="content-section"
+            >
+
+                <div class="section-header">
+                    THE ARCHIVE //
+                    TIMELINE
+                </div>
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <span>JUN 2025</span>
+
+                        <h3>
+                            FIRST START TALKING
+                        </h3>
+
+                        <p>
+                            "You entered my story..."
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <span>28 OCT 2025</span>
+
+                        <h3>
+                            FIRST MEETING
+                        </h3>
+
+                        <p>
+                            "I thought we'd just ..."
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <span>28 NOV 2025</span>
+
+                        <h3>
+                            FIRST MEMORY: MAKE MY DAY SPECIAL "MY BIRTHDAY"
+                        </h3>
+
+                        <p>
+                            Late night talks, and had a long........
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <span>24 SEP 2026</span>
+
+                        <h3>
+                            NOW, "I MISS YOU SO MUCH"
+                        </h3>
+
+                        <p>
+                            And many more...
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <span>TODAY</span>
+
+                        <h3>
+                            STILL MY FAVORITE PERSON
+                        </h3>
+
+                        <p>
+                            Some things never change.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================
+                 MEMORIES
+            ====================================== -->
+
+            <section
+                id="memories"
+                class="content-section"
+            >
+
+                <div class="section-header">
+                    THE ARCHIVE //
+                    MEMORY ROOM
+                </div>
+
+                <div class="memory-grid">
+
+                    <div class="memory-card">
+                        <img
+                            src="assets/images/memory-09.jpeg"
+                            alt="Memory"
+                        >
+
+                        <div>
+                            <span>MEMORY 001</span>
+                            <p>
+                                The moment I accepted you and I knew you ♥.....
+                            </p>
+                        </div>
+                    </div>
+                    <div class="memory-card">
+                        <img
+                            src="assets/images/memory-02.jpeg"
+                            alt="Memory"
+                        >
+
+                        <div>
+                            <span>MEMORY 002</span>
+                            <p>
+                                Beautiful view ♥........
+                            </p>
+                        </div>
+                    </div>
+                    <div class="memory-card">
+                        <img
+                            src="assets/images/memory-03.jpeg"
+                            alt="Memory"
+                        >
+
+                        <div>
+                            <span>MEMORY 003</span>
+                            <p>
+                                Chatora ♥.......
+                            </p>
+                        </div>
+                    </div>
+                    <div class="memory-card">
+                        <img
+                            src="assets/images/memory-04.jpeg"
+                            alt="Memory"
+                        >
+
+                        <div>
+                            <span>MEMORY 004</span>
+                            <p>
+                                Cuttie Pie ♥......
+                            </p>
+                        </div>
+                    </div>
+                    <div class="memory-card">
+                        <img
+                            src="assets/images/memory-06.jpeg"
+                            alt="Memory"
+                        >
+
+                        <div>
+                            <span>MEMORY 005</span>
+                            <p>
+                                Handsome ♥.....
+                            </p>
+                        </div>
+                    </div>
+                    <div class="memory-card">
+                        <img
+                            src="assets/images/memory-07.jpeg"
+                            alt="Memory"
+                        >
+
+                        <div>
+                            <span>MEMORY 006</span>
+                            <p>
+                                Jay Hind ♥............
+                            </p>
+                        </div>
+                    </div>
+                    <div class="memory-card">
+                        <img
+                            src="assets/images/memory-08.jpeg"
+                            alt="Memory"
+                        >
+
+                        <div>
+                            <span>MEMORY 007</span>
+                            <p>
+                                Khadus + Jhadus ♥......
+                            </p>
+                        </div>
+                    </div>
+                    <div class="memory-card">
+                        <img
+                            src="assets/images/memory-10.jpeg"
+                            alt="Memory"
+                        >
+
+                        <div>
+                            <span>MEMORY 008</span>
+                            <p>
+                                yaha me pighal gai ♥.........
+                            </p>
+                        </div>
+                    </div>
+                    <div class="memory-card">
+                        <img
+                            src="assets/images/memory-11.jpeg"
+                            alt="Memory"
+                        >
+
+                        <div>
+                            <span>MEMORY 009</span>
+                            <p>
+                                Lambu Man ♥........
+                            </p>
+                        </div>
+                    </div>
+                    <div class="memory-card">
+                        <img
+                            src="assets/images/memory-12.jpeg"
+                            alt="Memory"
+                        >
+
+                        <div>
+                            <span>MEMORY 010</span>
+                            <p>
+                                Matarani ke sath majak nhi ♥.............
+                            </p>
+                        </div>
+                    </div>
+                    <div class="memory-card">
+                        <img
+                            src="assets/images/memory-13.jpeg"
+                            alt="Memory"
+                        >
+
+                        <div>
+                            <span>MEMORY 011</span>
+                            <p>
+                                Khadak Singh Muchchhad ♥......
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="memory-card">
+                        <img
+                            src="assets/images/memory-05.jpeg"
+                            alt="Memory"
+                        >
+
+                        <div>
+                            <span>MEMORY 012</span>
+                            <p>
+                                One of my favorite days. travelling together ♥.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="memory-card">
+                        <img
+                            src="assets/images/memory-01.jpeg"
+                            alt="Memory"
+                        >
+
+                        <div>
+                            <span>MEMORY 013</span>
+                            <p>
+                                You made this moment special ♥....
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================
+                 ANALYSIS
+            ====================================== -->
+
+            <section
+                id="analysis"
+                class="content-section"
+            >
+
+                <div class="section-header">
+                    THE ARCHIVE //
+                    BEHAVIORAL ANALYSIS
+                </div>
+
+                <div class="analysis-card">
+
+                    <h2>
+                        SUBJECT ANALYSIS
+                    </h2>
+
+                    <div class="meter">
+
+                        <div class="meter-label">
+                            Smile Generation
+                            <span>100%</span>
+                        </div>
+
+                        <div class="meter-track">
+                            <div style="width:100%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="meter">
+
+                        <div class="meter-label">
+                            Ability To Annoy Me
+                            <span>97%</span>
+                        </div>
+
+                        <div class="meter-track">
+                            <div style="width:97%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="meter">
+
+                        <div class="meter-label">
+                            Importance To Me
+                            <span>∞%</span>
+                        </div>
+
+                        <div class="meter-track">
+                            <div style="width:100%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="analysis-result">
+
+                        <span>
+                            ●
+                        </span>
+
+                        ERROR — VALUE EXCEEDS
+                        SYSTEM LIMIT
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================
+                 SECRET FILE
+            ====================================== -->
+
+            <section
+                id="secret"
+                class="content-section"
+            >
+
+                <div class="section-header">
+                    THE ARCHIVE //
+                    UNKNOWN FILE
+                </div>
+
+                <div class="secret-file">
+
+                    <div class="lock">
+                        🔒
+                    </div>
+
+                    <h2>
+                        CLASSIFIED
+                    </h2>
+
+                    <p>
+                        ACCESS LEVEL: ∞
+                    </p>
+
+                    <button id="unlockSecret">
+                        UNLOCK
+                    </button>
+
+                    <div
+                        id="secretMessage"
+                        class="secret-message"
+                    >
+                        You're not supposed to be here...
+                        <br><br>
+                        But since it's you...
+                        ❤️
+                    </div>
+
+                </div>
+
+            </section>
+            <section id="love-letter" class="content-section hidden">
+
+    <div class="love-letter-container">
+
+        <div class="letter-label">
+            THE ARCHIVE // PERSONAL MESSAGE
+        </div>
+
+        <h1>Dear Roshan,</h1>
+
+        <p>
+            If you made it this far, congratulations.
+        </p>
+
+        <p>
+            You have accidentally discovered the most
+            unnecessarily complicated archive I've ever made
+            just to tell you something very simple.
+        </p>
+
+        <h2>I love you.</h2>
+
+        <p>
+            And if I could choose one person to keep
+            making memories with, laughing with,
+            growing with and loving with...
+        </p>
+
+        <h1 class="choose-you">
+            I'd choose you.
+        </h1>
+
+        <p class="every-time">
+            Every time. ♡
+        </p>
+
+        <button id="final-question">
+            YES, IT'S YOU ♥
+        </button>
+
+    </div>
+
+</section>
+
+<section id="closed" class="content-section hidden">
+
+    <div class="case-closed-container">
+
+        <img
+            src="assets/images/final.jpeg"
+            alt="Our memory"
+            class="final-image"
+        >
+
+        <div class="archive-label">
+            THE ARCHIVE
+        </div>
+
+        <h1>CASE CLOSED</h1>
+
+        <p>Reason for closure:</p>
+
+        <h2>
+            Subject has been permanently
+            claimed by me. ♡
+        </h2>
+
+        <div class="case-status">
+            CASE STATUS: FOREVER
+        </div>
+
+        <p class="thank-you">
+            Thank you for being you. ♡
+        </p>
+
+    </div>
+
+</section>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
